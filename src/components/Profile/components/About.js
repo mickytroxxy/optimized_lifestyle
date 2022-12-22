@@ -1,6 +1,6 @@
 import React, { memo, useContext } from 'react'
 import { View, TouchableOpacity, Text, StyleSheet, ScrollView, Image } from 'react-native'
-import { Ionicons, MaterialIcons,Feather,FontAwesome } from "@expo/vector-icons";
+import { Ionicons, MaterialIcons,AntDesign,FontAwesome } from "@expo/vector-icons";
 import * as Animatable from 'react-native-animatable';
 import { Col, Grid } from 'react-native-easy-grid';
 import { LinearGradient } from 'expo-linear-gradient';
@@ -70,7 +70,7 @@ const About = memo((props) => {
                 <View style={{flexDirection:'row',justifyContent:'center',alignContent:'center',alignItems:'center'}}>
                     <Text style={{color:'#2a2828',fontFamily:fontLight,marginRight:10}}>{ageCalculator(activeProfile?.birthDay).toFixed(0)}</Text>
                     {profileOwner &&(
-                        <TouchableOpacity onPress={()=>editProfile("birthDay")}>
+                        <TouchableOpacity onPress={() => editProfile("birthDay")}>
                             <FontAwesome name="edit" color="#c5c3c8" size={24}></FontAwesome>
                         </TouchableOpacity>
                     )}
@@ -127,7 +127,7 @@ const About = memo((props) => {
             {activeProfile?.type === 'AGENTS' && activeProfile?.privacy.map((item,i) => (
                 <View key={item.type + i} style={{flexDirection:'row',borderColor:'#f2eae9',borderBottomWidth:0.8,paddingBottom:10,marginBottom:10}}>
                     <View style={{width:30}}>
-                        <FontAwesome name="info" size={30} color="#0e75b4"/>
+                        <AntDesign name="Safety" size={30} color="#0e75b4"/>
                     </View>
                     <View style={{justifyContent:'center',alignContent:'center',flex:1}}>
                         <Text style={{color:'#2a2828',fontFamily:fontBold,paddingLeft:15}}>{item.type}</Text>

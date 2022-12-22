@@ -65,7 +65,7 @@ const BodySection = ({navigation}) =>{
     } = useContext(AppContext);
     const [formData,setFormData] = useState({phoneNumber:'',fname:'',gender:'MALE',password:''});
     const handleChange = (field,value) => setFormData(v =>({...v, [field] : value}));
-    const register = () =>{
+    const register = () => {
       if(formData.fname !== '' && formData.password.length > 5 && formData.phoneNumber.length > 7){
         setConfirmDialog({isVisible:true,text:`Hi ${formData.fname}, please confirm if you have entered the correct details`,okayBtn:'CONFIRM',cancelBtn:'Cancel',response:(res) => { 
           const phoneNumber = phoneNoValidation(formData.phoneNumber,countryData.dialCode);

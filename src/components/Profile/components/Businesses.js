@@ -1,6 +1,6 @@
 import React, { memo, useContext, useState } from 'react'
 import { View, TouchableOpacity, Text, StyleSheet, ScrollView, Image } from 'react-native'
-import { Ionicons, MaterialIcons,Feather,FontAwesome } from "@expo/vector-icons";
+import { Ionicons, AntDesign,Feather,FontAwesome } from "@expo/vector-icons";
 import * as Animatable from 'react-native-animatable';
 import { LinearGradient } from 'expo-linear-gradient';
 import { AppContext } from '../../../context/AppContext';

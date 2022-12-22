@@ -7,6 +7,7 @@ import DateTimeSelector from './Modals/DateTimeSelector';
 import ModalSelector from './Modals/ModalSelector';
 import CountryList from './Modals/CountryList';
 import Input from './Modals/Input';
+import Prices from './Modals/Prices';
 const ModalCoontroller = props =>{
     const {appState:{fontFamilyObj}} = React.useContext(AppContext)
     const attr = props.modalState.attr;
@@ -27,6 +28,7 @@ const ModalCoontroller = props =>{
                         {(props.modalState.attr.headerText === "FACEBOOK LINK" || props.modalState.attr.headerText === "YOUR ABOUT") && <Input attr={attr}/>}
                         {(props.modalState.attr.headerText === "SELECT COUNTRY | REGION") && <CountryList attr={attr}/>}
                         {(props.modalState.attr.headerText === "SELECT GENDER") && <ModalSelector attr={attr}/>}
+                        {(props.modalState.attr.headerText === "SETUP YOUR RATES") && <Prices attr={attr}/>}
                         {(props.modalState.attr.headerText === "SELECT DATE" || props.modalState.attr.headerText === "SELECT TIME") && <DateTimeSelector attr={attr}/>}
                     </View>
                 </View>
